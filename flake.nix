@@ -3,17 +3,14 @@
 
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
 		nvf = {
 			url = "github:NotAShelf/nvf";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-
 		home-manager = {
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-
 	  plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs = {
@@ -21,9 +18,13 @@
         home-manager.follows = "home-manager";
       };
     };
+    distro-grub-themes.url = "github:AdisonCavani/distro-grub-themes";
   };
 
 	outputs = { self, nixpkgs, ... }@inputs: 
+  let
+    system = "x86_64-linux";
+  in
   {
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
@@ -32,6 +33,7 @@
           ./hosts/laptop/configuration.nix
           inputs.nvf.nixosModules.default
           inputs.home-manager.nixosModules.default
+          inputs.distro-grub-themes.nixosModules.${system}.default
         ];
       };
 
@@ -41,6 +43,7 @@
           ./hosts/pc/configuration.nix
           inputs.nvf.nixosModules.default
           inputs.home-manager.nixosModules.default
+          inputs.distro-grub-themes.nixosModules.${system}.default
         ];
       };
     };
