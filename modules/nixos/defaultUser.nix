@@ -3,7 +3,7 @@
 {
   options = {
     zsh.enable = lib.mkEnableOption "enables zsh" // { default = true; };
-    autoLogin.callum.enable = lib.mkEnableOption "enables autologin of user callum" // { default = true; };
+    callum.autologin.enable = lib.mkEnableOption "enables autologin of user callum" // { default = false; };
   };
 
   config = {
@@ -18,6 +18,6 @@
     programs.zsh.enable = lib.mkIf config.zsh.enable true;
 
     # Enable autologin
-    services.getty.autologinUser = lib.mkIf config.autoLogin.callum.enable "callum";
+    services.getty.autologinUser = lib.mkIf config.callum.autologin.enable "callum";
   };
 }
