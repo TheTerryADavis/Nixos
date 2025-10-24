@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ./defaultUser.nix
-    ./defaultPkgs.nix
+    ./user.nix
+    ./pkgs.nix
     ./home-manager.nix
     ./fonts.nix
     ./nh.nix
