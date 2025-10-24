@@ -6,7 +6,7 @@
     ./pkgs.nix
     ./home-manager.nix
     ./fonts.nix
-    ./nh.nix
+    ../nh.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
