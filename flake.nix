@@ -18,6 +18,7 @@
         home-manager.follows = "home-manager";
       };
     };
+    nix-ai-tools.url = "github:numtide/nix-ai-tools";
   };
 
 	outputs = { self, nixpkgs, ... }@inputs: 
@@ -32,6 +33,7 @@
           ./hosts/laptop/configuration.nix
           inputs.nvf.nixosModules.default
           inputs.home-manager.nixosModules.default
+          inputs.nix-ai-tools.nixosModules.default
         ];
       };
 
@@ -41,6 +43,7 @@
           ./hosts/pc/configuration.nix
           inputs.nvf.nixosModules.default
           inputs.home-manager.nixosModules.default
+          inputs.nix-ai-tools.nixosModules.default
         ];
       };
     };

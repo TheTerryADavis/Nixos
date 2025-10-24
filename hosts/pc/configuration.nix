@@ -6,6 +6,7 @@
 		./../../modules/nixos/default/default.nix
     ./../../modules/nixos/plasma.nix
     ./../../modules/nixos/steam.nix
+    ./../../modules/nixos/ai.nix
   ];
 
   nvf.colorscheme.nord.enable = true;
