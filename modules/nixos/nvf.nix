@@ -59,7 +59,6 @@
           #debugmode.enable = true; # Figure out how to use this first(figure out a debugger to use first as well)
           filetree.nvimTree = {
             enable = true;
-            mappings.refresh = "tr";
           };
           #formatter.conform-nvim.enable = true; # Figure out how to use it 
           git = {
@@ -69,10 +68,6 @@
           };
           minimap.codewindow = {
             enable = true;
-            mappings = {
-              close = "mc";
-              open = "mo";
-            };
           };
           notify.nvim-notify.enable = true;
           #python3Packages # Figure out if you need any

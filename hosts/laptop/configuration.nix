@@ -3,9 +3,8 @@
 {
 	imports = [
 		./hardware-configuration.nix
-		./../../modules/nixos/default.nix
+		./../../modules/nixos/default/default.nix
     ./../../modules/nixos/sway/default.nix
-    ./../../modules/nixos/grub.nix
   ];
 
   networking.hostName = "laptop";

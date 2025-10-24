@@ -3,10 +3,9 @@
 {
 	imports = [
 		./hardware-configuration.nix
-		./../../modules/nixos/default.nix
+		./../../modules/nixos/default/default.nix
     ./../../modules/nixos/plasma.nix
     ./../../modules/nixos/steam.nix
-    ./../../modules/nixos/grub.nix
   ];
 
   nvf.colorscheme.nord.enable = true;
