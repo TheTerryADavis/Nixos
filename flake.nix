@@ -7,10 +7,10 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-    nvf = {
-			url = "github:NotAShelf/nvf";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+    #nvf = {
+		#	url = "github:NotAShelf/nvf";
+		#	inputs.nixpkgs.follows = "nixpkgs";
+		#};
 	  plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs = {
@@ -31,9 +31,8 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/laptop/configuration.nix
-          inputs.nvf.nixosModules.default
+          #inputs.nvf.nixosModules.default
           inputs.home-manager.nixosModules.default
-          inputs.nix-ai-tools.nixosModules.default
         ];
       };
 
@@ -41,9 +40,8 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/pc/configuration.nix
-          inputs.nvf.nixosModules.default
+          #inputs.nvf.nixosModules.default
           inputs.home-manager.nixosModules.default
-          inputs.nix-ai-tools.nixosModules.default
         ];
       };
     };

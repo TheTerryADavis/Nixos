@@ -9,7 +9,6 @@
   };
 
   imports = [
-    ../nvf.nix
     ../browsers.nix
   ];
 

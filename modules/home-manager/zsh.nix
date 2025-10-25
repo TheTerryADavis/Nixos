@@ -11,7 +11,7 @@
       syntaxHighlighting.enable = true;
 
       shellAliases = {
-        nix = "nom";
+        #nix = "nom";
         ls = "eza";
         cl = "clear";
         nv = "nvim";
