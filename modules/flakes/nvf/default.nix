@@ -1,13 +1,9 @@
-{ lib, config, ... }: {
-  options = {
-    defaultPkgs.nvf.enable = lib.mkEnableOption "enables nvf" // { default = true; };
-    nvf.colorscheme.nord.enable = lib.mkEnableOption "changes the nvf colorscheme from gruvbox(the default is gruvbox)" // { default = false; };
-  };
+{ lib, config, ... }:
 
-  config = lib.mkIf config.defaultPkgs.enable { # Option enabled in ./defaultPkgs.nix
-    programs.nvf = lib.mkIf config.defaultPkgs.nvf.enable {
-      enable = true;
-      settings = {
+{
+  options.nvf.colorscheme.nord.enable = lib.mkEnableOption "changes the nvf colorscheme from gruvbox(the default is gruvbox)" // { default = false; };
+
+  config = {
         vim = {
           enableLuaLoader = true; # Faster loading times
 
@@ -66,9 +62,7 @@
             git-conflict.enable = true;
             gitsigns.enable = true;
           };
-          minimap.codewindow = {
-            enable = true;
-          };
+          minimap.codewindow.enable = true;
           notify.nvim-notify.enable = true;
           #python3Packages # Figure out if you need any
           runner.run-nvim.enable = true;
@@ -122,8 +116,6 @@
             csharp.enable = true;
             bash.enable = true;
           };
-        };
+	};
       };
-    };
-  };
 }

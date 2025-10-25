@@ -7,11 +7,8 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-    #nvf = {
-		#	url = "github:NotAShelf/nvf";
-		#	inputs.nixpkgs.follows = "nixpkgs";
-		#};
-	  plasma-manager = {
+	  nvf.url = "path ./modules/flakes/nvf";
+    plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs = {
         nixpkgs.follows = "nixpkgs";
