@@ -1,9 +1,9 @@
 { ... }:
 
 {
-	imports = [
-		./hardware-configuration.nix
-		./../../modules/nixos/default/default.nix
+  imports = [
+    ./hardware-configuration.nix
+    ./../../modules/nixos/default/default.nix
     ./../../modules/nixos/plasma.nix
     ./../../modules/nixos/steam.nix
     ./../../modules/nixos/ai.nix

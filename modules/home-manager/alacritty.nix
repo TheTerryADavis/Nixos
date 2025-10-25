@@ -2,11 +2,18 @@
 
 {
   options = {
-    defaultPkgs.alacritty.enable = lib.mkEnableOption "Enable the default home manager pkgs" // { default = true; };
-    alacritty.colorscheme.nord.enable = lib.mkEnableOption "Changes from gruvbox to nord(gruvbox is the default)" // { default = false; };
+    defaultPkgs.alacritty.enable = lib.mkEnableOption "Enable the default home manager pkgs" // {
+      default = true;
+    };
+    alacritty.colorscheme.nord.enable =
+      lib.mkEnableOption "Changes from gruvbox to nord(gruvbox is the default)"
+      // {
+        default = false;
+      };
   };
 
-  config = lib.mkIf config.defaultPkgs.enable { # Declared in defaultPkgs.nix
+  config = lib.mkIf config.defaultPkgs.enable {
+    # Declared in defaultPkgs.nix
     fonts.fontconfig.enable = true;
     programs.alacritty = lib.mkIf config.defaultPkgs.alacritty.enable {
       enable = true;

@@ -1,7 +1,14 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  options.defaultPkgs.nh.enable = lib.mkEnableOption "enables nh" // { default = true; };
+  options.defaultPkgs.nh.enable = lib.mkEnableOption "enables nh" // {
+    default = true;
+  };
 
   config = lib.mkIf config.defaultPkgs.nh.enable {
     environment = {
@@ -13,7 +20,7 @@
         nh
         nix-output-monitor
         nvd
-      ]; 
+      ];
     };
   };
 }

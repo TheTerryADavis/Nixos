@@ -2,8 +2,12 @@
 
 {
   options.defaultPkgs = {
-    enable = lib.mkEnableOption "Enables the default pkgs for home manager" // { default = true; };
-    feh.enable = lib.mkEnableOption "Enables feh(an image veiwer)" // { default = true; };
+    enable = lib.mkEnableOption "Enables the default pkgs for home manager" // {
+      default = true;
+    };
+    feh.enable = lib.mkEnableOption "Enables feh(an image veiwer)" // {
+      default = true;
+    };
   };
 
   imports = [

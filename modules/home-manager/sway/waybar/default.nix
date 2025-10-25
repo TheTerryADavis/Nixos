@@ -4,16 +4,27 @@
   programs.waybar = {
     enable = true;
     settings.mainBar = {
-      modules-left = [ "clock" "network" "pulseaudio" ];
+      modules-left = [
+        "clock"
+        "network"
+        "pulseaudio"
+      ];
       modules-center = [ "sway/workspaces" ];
-      modules-right = [ "temperature" "cpu" "memory" "disk" "battery" ];
+      modules-right = [
+        "temperature"
+        "cpu"
+        "memory"
+        "disk"
+        "battery"
+      ];
 
       # Disk group
       "disk" = {
         format = "Disk: {percentage_used}%";
       };
 
-      "disk#config" = { # This just displays the size of the whole disk
+      "disk#config" = {
+        # This just displays the size of the whole disk
         path = ./../../..;
         format = "Config: {used}";
       };

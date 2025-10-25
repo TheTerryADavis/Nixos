@@ -33,7 +33,7 @@ in
       window.titlebar = false;
 
       # Disable swaybar
-      bars = [];
+      bars = [ ];
 
       keybindings = {
         ### Apps
