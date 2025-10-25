@@ -7,7 +7,7 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-	  nvf.url = "path ./modules/flakes/nvf";
+	  nvf.url = "./modules/flakes/nvf";
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs = {
@@ -39,7 +39,7 @@
           ./hosts/pc/configuration.nix
           #inputs.nvf.nixosModules.default
           inputs.home-manager.nixosModules.default
-        ];
+	];
       };
     };
   };
