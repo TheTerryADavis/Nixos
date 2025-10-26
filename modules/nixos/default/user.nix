@@ -24,7 +24,7 @@
       packages = with pkgs; [ ];
     };
 
-    programs.zsh.enable = lib.mkIf config.zsh.enable true;
+    programs.zsh.enable = true;
 
     # Enable autologin
     services.getty.autologinUser = lib.mkIf config.callum.autologin.enable "callum";

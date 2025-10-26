@@ -10,8 +10,6 @@
     ./../../modules/home-manager/plasma.nix
   ];
 
-  alacritty.colorscheme.nord.enable = true;
-
   home.packages = [ ];
   home.file = { };
   home.sessionVariables = { };

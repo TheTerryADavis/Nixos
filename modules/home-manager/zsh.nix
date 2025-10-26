@@ -18,7 +18,7 @@
         cl = "clear";
         nv = "nvim";
         tr = "tree";
-        neo = "neofetch";
+        fetch = "neofetch";
         py = "python3";
         veiw = "feh";
         shut = "shutdown now";
