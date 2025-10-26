@@ -9,7 +9,7 @@
     ./../../modules/nixos/ai.nix
   ];
 
-  #nvf.colorscheme.nord.enable = true;
+  nvf.colorscheme.nord.enable = true;
   callum.autologin.enable = true;
 
   networking.hostName = "pc";

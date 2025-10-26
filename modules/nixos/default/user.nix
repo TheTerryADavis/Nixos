@@ -7,9 +7,6 @@
 
 {
   options = {
-    zsh.enable = lib.mkEnableOption "enables zsh" // {
-      default = true;
-    };
     callum.autologin.enable = lib.mkEnableOption "enables autologin of user callum" // {
       default = false;
     };
@@ -23,7 +20,7 @@
         "networkmanager"
         "wheel"
       ];
-      shell = lib.mkIf config.zsh.enable pkgs.zsh;
+      shell = pkgs.zsh;
       packages = with pkgs; [ ];
     };
 

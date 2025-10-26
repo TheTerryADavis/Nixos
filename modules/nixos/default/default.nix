@@ -9,8 +9,6 @@
     ../nh.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-
   # Enable flakes
   nix.settings.experimental-features = [
     "nix-command"
@@ -19,7 +17,8 @@
 
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
-
+  boot.loader.systemd-boot.enable = true;
+  
   # Enable networking
   # Make this it's own module with options for a vpn and tor
   networking.networkmanager.enable = true;

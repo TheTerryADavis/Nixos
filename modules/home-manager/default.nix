@@ -1,8 +1,19 @@
-{ ... }:
+{
+  lib,
+  ...
+}:
 
 {
+  options.defaultPkgs = {
+    enable = lib.mkEnableOption "Enables the default pkgs for home manager" // {
+      default = true;
+    };
+  };
+
   imports = [
     ./zsh.nix
-    ./defaultPkgs.nix
+    ./alacritty.nix
+    ./eza.nix
+    ./lf.nix
   ];
 }

@@ -1,16 +1,10 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
 
 {
-  options.defaultPkgs.nh.enable = lib.mkEnableOption "enables nh" // {
-    default = true;
-  };
-
-  config = lib.mkIf config.defaultPkgs.nh.enable {
+  config = {
     environment = {
       sessionVariables = {
         NH_FLAKE = "/home/callum/config";
