@@ -32,6 +32,11 @@ in
         key = "Meta+Alt+B";
         command = "brave";
       };
+      "launch-steam" = {
+        name = "Launch Steam";
+        key = "Meta+Alt+S";
+        command = "steam";
+      };
     };
 
     fonts = {
