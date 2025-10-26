@@ -23,6 +23,7 @@
       pkgs.tree 
       pkgs.neofetch
       pkgs.git
+      pkgs.feh
     ];
   };
 }

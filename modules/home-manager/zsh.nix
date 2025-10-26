@@ -21,6 +21,7 @@
         neo = "neofetch";
         py = "python3";
         veiw = "feh";
+        shut = "shutdown now";
       };
       history.size = 10000;
 

@@ -155,11 +155,11 @@
         "nvf": "nvf_2"
       },
       "locked": {
-        "path": "./modules/flakes/nvf",
+        "path": "./flakes/nvf",
         "type": "path"
       },
       "original": {
-        "path": "./modules/flakes/nvf",
+        "path": "./flakes/nvf",
         "type": "path"
       },
       "parent": []
